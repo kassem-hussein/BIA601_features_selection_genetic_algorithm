@@ -18,12 +18,13 @@ class GeneticAlgorithm:
       def __fitness(self):
             pass
       
-      def __crossover(self,a,b):
+      def __crossover(self,first_chromosome,second_chromosome):
             pass
       
-      def __mutate(self,a):
+      def __mutate(self,chromosome):
             pass
-
+      def __predicate(self,chormosome):
+            pass
       def start(self):
             pass
 
