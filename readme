@@ -1,7 +1,7 @@
 # GENETIC ALGORITHM 
 ## steps to install 
 ###   Step(1)
-            git clone https://github.com/kassem-hussein/BIA601_features_selection_genetic_algorithm.git
+      git clone https://github.com/kassem-hussein/BIA601_features_selection_genetic_algorithm.git
 ###   Step(2)
             ON Windows to make virtual env
             cd BIA601_features_selection_genetic_algorithm
