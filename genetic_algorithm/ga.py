@@ -1,6 +1,5 @@
 import math
-
-
+import random
 class GeneticAlgorithm:
       
 
@@ -40,8 +39,8 @@ class GeneticAlgorithm:
             pass
       
       def __mutate(self,chromosome):
-            pass
-      def __predicate(self,chormosome):
+            return tuple(1 - bit if random.random() < self.__mutation_rate else bit for bit in chromosome)
+      def __predicate(self,chromosome):
             pass
       def start(self):
             pass
