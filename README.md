@@ -7,11 +7,11 @@
 cd BIA601_features_selection_genetic_algorithm
 ```
 ```bash
-      python -m venv env
+python -m venv env
 ```
 ### step(3) Activate Env using cmd
 ```bach
-      env\Scripts\Activate
+env\Scripts\Activate
 ```
 ### Step(4) install requirements
 ```bach
