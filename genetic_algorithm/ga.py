@@ -19,7 +19,7 @@ class GeneticAlgorithm:
       def __init_population(self):
             pass
 
-      def fitness(self, chromosome):
+      def __fitness(self, chromosome):
             columns = [self.__X.columns[i] for i, bit in enumerate(chromosome) if bit == 1]
             if len(columns) == 0:
                      return 0.0
