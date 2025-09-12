@@ -1,3 +1,4 @@
+import random
 class GeneticAlgorithm:
 
       # constractor 
@@ -21,8 +22,8 @@ class GeneticAlgorithm:
       def __crossover(self,first_chromosome,second_chromosome):
             pass
       
-      def __mutate(self,chromosome):
-            pass
+      def __mutate(self,chormosome):
+            return tuple(1 - bit if random.random() < self.__mutation_rate else bit for bit in chromosome)
       def __predicate(self,chormosome):
             pass
       def start(self):
