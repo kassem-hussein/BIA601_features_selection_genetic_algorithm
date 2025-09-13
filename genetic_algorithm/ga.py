@@ -45,7 +45,10 @@ class GeneticAlgorithm:
            
       
       def __crossover(self,first_chromosome,second_chromosome):
-            pass
+            p1, p2 = sorted(random.sample(range(len(a)), 2))
+            child1 = first_chromosome[:p1] + second_chromosome[p1:p2] + first_chromosome[p2:]
+            child2 = second_chromosome[:p1] + first_chromosome[p1:p2] + second_chromosome[p2:]
+            return [child1, child2]
       
       def __mutate(self,chromosome):
             return tuple(1 - bit if random.random() < self.__mutation_rate else bit for bit in chromosome)
