@@ -17,7 +17,16 @@ class GeneticAlgorithm:
             self.__mutation_rate = mutation_rate
 
       def __init_population(self):
-            pass
+         chromosomes = []
+         for _ in range( self.__N_populations):
+            chrom = tuple(random.choice([0,1]) for _ in range( self.__N_features))
+            if chrom  == ([0]* self.__N_features) or chrom == ([1]*  self.__N_features):
+                  continue
+            else :
+               chromosomes.append(chrom)
+         return chromosomes   
+
+    
 
       def __fitness(self, chromosome):
             columns = [self.__X.columns[i] for i, bit in enumerate(chromosome) if bit == 1]
