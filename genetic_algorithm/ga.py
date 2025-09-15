@@ -18,9 +18,9 @@ class GeneticAlgorithm:
 
       def __init_population(self):
          chromosomes = []
-         for _ in range( self.__N_populations):
+         while len(chromosomes) < self.__N_populations:
             chrom = tuple(random.choice([0,1]) for _ in range( self.__N_features))
-            if chrom  == ([0]* self.__N_features) or chrom == ([1]*  self.__N_features):
+            if chrom  == tuple([0]* self.__N_features) or chrom == tuple([1]*  self.__N_features):
                   continue
             else :
                chromosomes.append(chrom)
