@@ -35,17 +35,17 @@ class GeneticAlgorithm:
             correlations = 0.0
      
             for col in columns:
-               res = self.__df[self.__target].corr(self.__df[col] )
-               res = float(res)
-            if not math.isnan(res):
-              correlations += abs(res)
+                  res = self.__df[self.__target].corr(self.__df[col] )
+                  res = float(res)
+                  if not math.isnan(res):
+                        correlations += abs(res)
             return round(correlations * (correlations / len(columns)), 8)
         
 
            
       
       def __crossover(self,first_chromosome,second_chromosome):
-            p1, p2 = sorted(random.sample(range(len(a)), 2))
+            p1, p2 = sorted(random.sample(range(len(first_chromosome)), 2))
             child1 = first_chromosome[:p1] + second_chromosome[p1:p2] + first_chromosome[p2:]
             child2 = second_chromosome[:p1] + first_chromosome[p1:p2] + second_chromosome[p2:]
             return [child1, child2]
