@@ -16,15 +16,15 @@ class GeneticAlgorithm:
             self.__N_features    = X.shape[1]
             self.__mutation_rate = mutation_rate
 
-      def init_population(self):
-            chromosomes = []
-            while len(chromosomes) < self.__N_populations:
-                  chrom = tuple(random.choice([0,1]) for _ in range( self.__N_features))
-                  if chrom  == (tuple([0]* self.__N_features)) or chrom == (tuple([1]*  self.__N_features)):
-                        continue
-                  else :
-                        chromosomes.append(chrom)
-            return chromosomes   
+      def __init_population(self):
+         chromosomes = []
+         while len(chromosomes) < self.__N_populations:
+            chrom = tuple(random.choice([0,1]) for _ in range( self.__N_features))
+            if chrom  == tuple([0]* self.__N_features) or chrom == tuple([1]*  self.__N_features):
+                  continue
+            else :
+               chromosomes.append(chrom)
+         return chromosomes   
 
     
 
