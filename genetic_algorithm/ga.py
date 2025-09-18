@@ -15,6 +15,7 @@ class GeneticAlgorithm:
             self.__model         = model_type
             self.__N_features    = X.shape[1]
             self.__mutation_rate = mutation_rate
+            self.__fitness_cache = {}
 
       def __init_population(self):
          chromosomes = []
@@ -29,17 +30,22 @@ class GeneticAlgorithm:
     
 
       def __fitness(self, chromosome):
+            if chromosome in self.__fitness_cache:
+                  return self.__fitness_cache[chromosome]
             columns = [self.__X.columns[i] for i, bit in enumerate(chromosome) if bit == 1]
             if len(columns) == 0:
-                     return 0.0
+                  self.__fitness_cache[chromosome] = 0.0   
+                  return 0.0
             correlations = 0.0
-     
+
             for col in columns:
                   res = self.__df[self.__target].corr(self.__df[col] )
                   res = float(res)
                   if not math.isnan(res):
                         correlations += abs(res)
-            return round(correlations * (correlations / len(columns)), 8)
+            val   = round(correlations * (correlations / len(columns)), 8)
+            self.__fitness_cache[chromosome] = val
+            return val
         
 
            
