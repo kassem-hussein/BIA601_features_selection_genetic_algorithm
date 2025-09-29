@@ -20,4 +20,11 @@ env\Scripts\Activate
 ###   Step(5) Start work
       create your branch and start work
 
+###  Run Local server for web
+check virtual env is working
+then start server using command
+```bash
+python app.py
+```
+
 

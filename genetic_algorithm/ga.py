@@ -74,12 +74,7 @@ class GeneticAlgorithm:
                 return 0.0
             
             # Calculate correlation sum
-            correlations = 0.0
-            for col in columns:
-                res = self.__df[self.__target].corr(self.__df[col])
-                res = float(res)
-                if not math.isnan(res):
-                    correlations += abs(res)
+            correlations = self.__df.corr()[self.__target].drop(self.__target).abs()[columns].sum()
             
             # Calculate weighted fitness score
             val = round(correlations * (correlations / len(columns)), 8)
@@ -173,8 +168,47 @@ class GeneticAlgorithm:
             Start the genetic algorithm optimization process
             
             Returns:
-                dict: Results containing best chromosome, fitness, and selected features
+                tuple: selected feautres,fitness_value,accuracy,length of selected features,total features,generations
             """
-            pass
+            print("Loadding...")
 
+            population = self.__init_population()
+            fitness_values = []
+
+            # Initial fitness evaluation
+            for chrom in population:
+                score = self.__fitness(chrom)
+                fitness_values.append((score, chrom))
+
+            generations_child = []
+            for gen in range(self.__N_generations):
+                fitness_values =sorted(fitness_values, key=lambda x: x[0], reverse=True)
+                print(f"\n Generation {gen + 1}")
+                parents = [fitness_values[i][1] for i in range(3)]
+                children = []
+                children +=self.__crossover(parents[0], parents[1])
+                children +=self.__crossover(parents[0], parents[2])
+                children +=self.__crossover(parents[1], parents[2])
+      
+                genration = []
+                for child in children:
+                        mutated = self.__mutate(child)
+                        if mutated in [tuple([0]*self.__X.shape[1]), tuple([1]*self.__X.shape[1])]:
+                            continue
+                        fitness_value = self.__fitness(mutated)
+                        item = {}
+                        item["child"] = mutated
+                        item["fitness"] =fitness_value
+                        item['features'] =sum([bit for bit in mutated if bit == 1])
+                        genration.append(item)
+                        fitness_values.append((fitness_value, mutated))
+                generations_child.append(genration)
+            best = fitness_values[0]
+            fitness_value = self.__fitness(best[1])
+            accuracy = self.__predicate(best[1])
+            selected_features = [self.__X.columns[i] for i, bit in enumerate(best[1]) if bit == 1]
+            return (selected_features,fitness_value,accuracy,len(selected_features),self.__X.shape[1],generations_child)
+
+            
+            
 
