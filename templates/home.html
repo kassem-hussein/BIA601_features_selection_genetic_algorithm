@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}
+      LessFeatures
+{% endblock title %}
+
+{% block content %}
+<section id="hero" class="flex items-center justify-center h-screen text-white">
+  <div class="text-center px-6">
+    <h1 class="text-5xl font-extrabold mb-4">Select Features using Genetic Algorithm</h1>
+    <p class="text-lg mb-6">Open source, help you to select most important features using GAs</p>
+    <a href="#get-started" class="inline-block bg-orange-600 text-white font-semibold px-6 py-3 rounded shadow-lg hover:bg-orange-800 transition duration-300">
+      Get Started
+    </a>
+  </div>
+</section>
+
+<section id="project" class="bg-gray-100 flex items-center  py-20">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+      What is our porject ?
+    </h2>
+    <div class="my-2">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4">
+        Project Defination
+      </h3>
+      <p class="text-gray-600 text-lg">
+          LessFeatures is open source project help to find the most important features using genetic algorithm that make easy to training your model in less of features 
+      </p>
+    </div>
+    <div class="my-2">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">
+          What are technologies used in this porject ?
+        </h3>
+        <div class="bg-gray-100 py-12">
+          <div class="max-w-6xl mx-auto px-4 text-center">            
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+              
+              <!-- Pandas -->
+              <div class="flex flex-col gap-2 items-center">
+                <img src="{{ url_for('static', filename='images/pandas.png') }}" alt="pandas Image" class="w-16 h-16 object-contain rounded-lg">
+                <span class="text-gray-700 font-medium">Pandas</span>
+              </div>
+
+              <!-- Python -->
+              <div class="flex flex-col gap-2 items-center">
+                <img src="{{ url_for('static', filename='images/py.png') }}" alt="python Image" class="w-16 h-16 object-contain rounded-lg">
+                <span class="text-gray-700 font-medium">Python</span>
+              </div>
+
+              <!-- Scikit-learn -->
+              <div class="flex flex-col gap-2 items-center">
+                <img src="{{ url_for('static', filename='images/scikit.png') }}" alt="pandas Image" class="w-16 h-16 object-contain rounded-lg">
+                <span class="text-gray-700 font-medium">Scikit-learn</span>
+              </div>
+
+              <!-- Flask -->
+              <div class="flex flex-col gap-2 items-center">
+                <img src="{{ url_for('static', filename='images/flask.png') }}" alt="pandas Image" class="w-16 h-16 object-contain rounded-lg">
+                <span class="text-gray-700 font-medium">Flask</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="team" class="bg-white py-12">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
+    <p class="text-gray-600 mb-10">A group of passionate individuals driving innovation and excellence.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <!-- Team Member 1 -->
+      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800">KASSEM HUSSEIN | <span lang="ar" >قاسم حسين </span></h3>
+        <a href="https://github.com/kassem-hussein" class="block mt-4">
+          <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
+          github <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+      </div> 
+      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800">Moayad-AK |  <span lang="ar"> مؤيد العقاد </span> </h3>
+        <a href="https://github.com/Moayad-AK" class="block mt-4">
+          <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
+          github <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+      </div> 
+      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800">marahabdah | <span lang="ar">  مرح العباده </span> </h3>
+        <a href="https://github.com/marahabdah" class="block mt-4">
+          <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
+          github <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+      </div> 
+      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800">LamaHaji | <span lang="ar"> لمى الحاجي </span> </h3>
+        <a href="https://github.com/LamaHaji" class="block mt-4">
+          <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
+          github <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+      </div> 
+      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800">hazemshartouh-cyber | <span lang="ar"> حازم شرتوح </span>  </h3>
+        <a href="https://github.com/hazemshartouh-cyber" class="block mt-4">
+          <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
+          github <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+      </div> 
+      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800">Eng-mohamad94 | <span lang="ar"> محمد جندية </span> </h3>
+        <a href="https://github.com/Eng-mohamad94" class="block mt-4">
+          <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
+          github <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+      </div>   
+    </div>
+  </div>
+</section>
+
+<section id="get-started" class="bg-white py-12 mt-5">
+  <div class="max-w-xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Get Started</h2>
+    
+    <form method='post' action ='/result'  enctype="multipart/form-data" class="bg-gray-100 p-6 rounded-lg shadow-md space-y-4">
+      
+      <!-- CSV File Input -->
+      <div 
+        id="dropzone"
+        class="flex flex-col items-center justify-center border-2 border-dashed border-orange-400 rounded-lg p-6 bg-white cursor-pointer transition hover:bg-orange-50"
+      >
+        <p class="text-gray-600 mb-2">Drag & drop your CSV file here</p>
+        <p class="text-sm text-gray-400">or click to select</p>
+        <p id="selected-file" class="text-sm text-gray-400"></p>
+        <input 
+          type="file" 
+          name="data"
+          accept=".csv" 
+          id="fileInput" 
+          class="hidden"
+        >
+      </div>
+      <div>
+        {% if errors['data'] %}
+          <div class="text-sm text-red-500">
+            {{errors['data'][0]}}
+          </div>
+        {% endif %}
+      </div>
+
+
+      <!-- Text Input -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Target Column</label>
+        <input type="text" name="target" placeholder="Enter target column" class="w-full px-4 py-2 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+      </div>
+      <div>
+        {% if errors['target'] %}
+          <div class="text-sm text-red-500">
+              {{errors['target'][0]}}
+          </div>
+        {% endif %}
+      </div>
+      <!-- Select For model -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Model Type</label>
+        <select  name="model" class="w-full px-4 py-2 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <option value="classification">Classification</option>
+            <option value="regression">Regression</option>
+        </select>
+      </div>
+
+
+      <div>
+        {% if errors['model'] %}
+          <div class="text-sm text-red-500">
+              {{errors['model'][0]}}
+          </div>
+        {% endif %}
+      </div>
+
+
+
+
+      <!-- Number Input 1 -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Number of Generations</label>
+        <input type="number" name="n_generations" value="4" placeholder="Enter number of generations" class="w-full px-4 py-2 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+      </div>
+      <div>
+        {% if errors['n_generations'] %}
+          <div class="text-sm text-red-500">
+            {{errors['n_generations'][0]}}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Number Input 2 -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Number of Populations</label>
+        <input type="number" name="n_populations" value="8" placeholder="Enter numner of populations" class="w-full px-4 py-2 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+      </div>
+      <div>
+        {% if n_populations in errors %}
+          <div class="text-sm text-red-500">
+            {{errors['n_populations'][0]}}
+          </div>
+        {% endif %}
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Compare with Traditional Algorithm</label>
+        <select  name="compare" class="w-full px-4 py-2 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <option value="0">NO</option>
+            <option value="1">Yes(when choose this option please use little of feature for reduce time of response)</option>
+        </select>
+      </div>
+      <!-- Submit Button -->
+      <div class="text-end">
+        <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:scale-105">
+          Get Started
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+{% endblock content %}
+
+
+

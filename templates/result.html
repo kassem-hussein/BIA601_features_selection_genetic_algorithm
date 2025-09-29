@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+      LessFeatures - Result 
+{% endblock title %}
+
+{% block content %}
+<div class="p-8">
+    {% if  compare == "1" %}
+        <div> 
+            <h1 class="text-2xl my-2 font-bold">Traditional Algorithm Results</h1>
+            <div class="border-l-4 border-orange-600 px-4 py-2 bg-gray-50 ">
+                <p><strong>Accuracy:</strong> {{ t_accuracy }}%</p>
+                <p><strong>Time:</strong> {{ t_time }} seconds</p>
+                <p><strong>Selected Features:</strong> {{ t_len_selected }} / {{ n_total }}</p>
+                <p><strong>Features:</strong>
+                    {% for feature in t_selected_features %}
+                        <span>{{ feature }},</span>
+                    {% endfor %}
+                    
+                </p>
+
+            </div>
+        </div>
+    {% endif %}
+    <div>
+        <h1 class="text-2xl my-2 font-bold">Genetic Algorithm Results</h1>
+        <div class="border-l-4 border-orange-600 px-4 py-2 bg-gray-50 ">
+            <p><strong>Fitness Score:</strong> {{ fitness }}</p>
+            <p><strong>Accuracy:</strong> {{ accuracy }}%</p>
+            <p><strong>Time:</strong> {{ total_time }} seconds</p>
+            <p><strong>Selected Features:</strong> {{ n_selected }} / {{ n_total }}</p>
+            <p><strong>Features:</strong>
+                {% for feature in selected_features %}
+                    <span>{{ feature }},</span>
+                {% endfor %}
+                
+            </p>
+
+        </div>
+
+        <div class="summary">
+        <h1 class="text-xl my-2 font-bold">Generations</h1>
+        <div class="grid gird-col-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        {% for gen in genrations %}
+                    <div class="p-2 bg-gray-50 border-l-4 border-orange-600 px-4 py-2 bg-gray-50  my-2">
+                    <div class="text-lg underline">genration({{ loop.index }})</div>  <!-- starts at 1 -->
+                    {% for child in gen %}
+                            <div class="flex items-center flex-wrap gap-2">
+                                #{{  loop.index}}</p>
+                                <p><strong>Fitness score:</strong> {{ child['fitness'] }}</p>
+                                <p><strong>Selected Features:</strong> {{ child['features'] }}</p>
+                            </div>
+                    {%endfor%}
+                    </div>
+        {% endfor %}
+        </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock content %}
