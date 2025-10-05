@@ -2,6 +2,7 @@
 FLASK APP 
 '''
 from genetic_algorithm import  GeneticAlgorithm
+from sklearn.preprocessing import LabelEncoder
 from traditional_algorithm import TraditionalAlgorithm
 from flask import Flask,render_template,redirect,request,session,get_flashed_messages,flash
 import pandas as pd
@@ -67,11 +68,18 @@ def result():
             return redirect('/#get-started')
 
       # prepare data
-
-      df = df.select_dtypes(['number'])
-      df = df.dropna()
-      X =  df.drop(columns=[target])
+      for col in df.select_dtypes(include=['object']).columns:
+            le = LabelEncoder()
+            df[col] = le.fit_transform(df[col])
+      df.fillna(method='ffill', inplace=True)
+      df = df.head(10000)
+      X  =  df.drop(columns=[target])
+      if X.shape[0] == 0:
+            errors.setdefault('data',[]).append('Data must be have rows')
+            flash(errors,'errors')
+            return redirect('/#get-started')
       Y = df[target]
+
       start_time = time.time()
       selected_features,fitness_value,accuracy,n_selected,n_total,genrations =  GeneticAlgorithm(df, target, X, Y,model_type=model_type).start()
       end_time = time.time()
