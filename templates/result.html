@@ -10,7 +10,7 @@
         <div> 
             <h1 class="text-2xl my-2 font-bold">Traditional Algorithm Results</h1>
             <div class="border-l-4 border-orange-600 px-4 py-2 bg-gray-50 ">
-                <p><strong>Accuracy:</strong> {{ t_accuracy }}%</p>
+                <p><strong>Accuracy:</strong> {{ t_accuracy * 100 }}%</p>
                 <p><strong>Time:</strong> {{ t_time }} seconds</p>
                 <p><strong>Selected Features:</strong> {{ t_len_selected }} / {{ n_total }}</p>
                 <p><strong>Features:</strong>
@@ -27,7 +27,7 @@
         <h1 class="text-2xl my-2 font-bold">Genetic Algorithm Results</h1>
         <div class="border-l-4 border-orange-600 px-4 py-2 bg-gray-50 ">
             <p><strong>Fitness Score:</strong> {{ fitness }}</p>
-            <p><strong>Accuracy:</strong> {{ accuracy }}%</p>
+            <p><strong>Accuracy:</strong> {{ accuracy * 100}}%</p>
             <p><strong>Time:</strong> {{ total_time }} seconds</p>
             <p><strong>Selected Features:</strong> {{ n_selected }} / {{ n_total }}</p>
             <p><strong>Features:</strong>
