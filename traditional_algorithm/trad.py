@@ -1,4 +1,3 @@
-from itertools import combinations
 from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import f_classif,f_regression
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
@@ -21,8 +20,6 @@ class TraditionalAlgorithm:
             self.__model= RandomForestClassifier() if model_type== 'classification' else RandomForestRegressor() 
             self.__acc_f = accuracy_score  if model_type == 'classification' else r2_score
             self.__df = df
-            self.__target = target
-            self.__cache = {}
       def __get_selected_features(self):
             '''
                   Args:
@@ -81,11 +78,10 @@ class TraditionalAlgorithm:
                   Args:
                         No args
                   Return:
-                        tuple of accuracy and combination 
+                        tuple of accuracy and selected features 
             '''
             selected_features =  self.__get_selected_features()
             acc               =  self.__predicate(selected_features)
-            print((selected_features,acc))
             return (acc,selected_features)
             
                   
