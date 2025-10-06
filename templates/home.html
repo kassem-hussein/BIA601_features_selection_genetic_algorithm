@@ -7,29 +7,29 @@
 {% block content %}
 <section id="hero" class="flex items-center justify-center h-screen text-white">
   <div class="text-center px-6">
-    <h1 class="text-5xl font-extrabold mb-4">Select Features using Genetic Algorithm</h1>
-    <p class="text-lg mb-6">Open source, help you to select most important features using GAs</p>
-    <a href="#get-started" class="inline-block bg-orange-600 text-white font-semibold px-6 py-3 rounded shadow-lg hover:bg-orange-800 transition duration-300">
+    <h1 data-aos="fade-down" class="text-5xl font-extrabold mb-4">Select Features using Genetic Algorithm</h1>
+    <p  data-aos="slide-right"class="text-lg mb-6">Open source, help you to select most important features using GAs</p>
+    <a data-aos="slide-left" href="#get-started" class="inline-block bg-orange-600 text-white font-semibold px-6 py-3 rounded shadow-lg hover:bg-orange-800 transition duration-300">
       Get Started
     </a>
   </div>
 </section>
 
-<section id="project" class="bg-gray-100 flex items-center  py-20">
+<section id="project"  class="bg-gray-100 flex items-center  py-20">
   <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+    <h2 data-aos="slide-right" class="text-3xl font-bold text-gray-800 mb-4">
       What is our porject ?
     </h2>
     <div class="my-2">
-      <h3 class="text-2xl font-bold text-gray-800 mb-4">
+      <h3 data-aos="slide-right" class="text-2xl font-bold text-gray-800 mb-4">
         Project Defination
       </h3>
-      <p class="text-gray-600 text-lg">
+      <p data-aos="slide-left" class="text-gray-600 text-lg">
           LessFeatures is open source project help to find the most important features using genetic algorithm that make easy to training your model in less of features 
       </p>
     </div>
     <div class="my-2">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">
+        <h3 data-aos="slide-right" class="text-2xl font-bold text-gray-800 mb-4">
           What are technologies used in this porject ?
         </h3>
         <div class="bg-gray-100 py-12">
@@ -37,25 +37,25 @@
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
               
               <!-- Pandas -->
-              <div class="flex flex-col gap-2 items-center">
+              <div data-aos="fade-up" class="flex flex-col gap-2 items-center">
                 <img src="{{ url_for('static', filename='images/pandas.png') }}" alt="pandas Image" class="w-16 h-16 object-contain rounded-lg">
                 <span class="text-gray-700 font-medium">Pandas</span>
               </div>
 
               <!-- Python -->
-              <div class="flex flex-col gap-2 items-center">
+              <div data-aos="fade-up" class="flex flex-col gap-2 items-center">
                 <img src="{{ url_for('static', filename='images/py.png') }}" alt="python Image" class="w-16 h-16 object-contain rounded-lg">
                 <span class="text-gray-700 font-medium">Python</span>
               </div>
 
               <!-- Scikit-learn -->
-              <div class="flex flex-col gap-2 items-center">
+              <div data-aos="fade-up" class="flex flex-col gap-2 items-center">
                 <img src="{{ url_for('static', filename='images/scikit.png') }}" alt="pandas Image" class="w-16 h-16 object-contain rounded-lg">
                 <span class="text-gray-700 font-medium">Scikit-learn</span>
               </div>
 
               <!-- Flask -->
-              <div class="flex flex-col gap-2 items-center">
+              <div data-aos="fade-up" class="flex flex-col gap-2 items-center">
                 <img src="{{ url_for('static', filename='images/flask.png') }}" alt="pandas Image" class="w-16 h-16 object-contain rounded-lg">
                 <span class="text-gray-700 font-medium">Flask</span>
               </div>
@@ -76,7 +76,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       
       <!-- Team Member 1 -->
-      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+      <div data-aos ="slide-right" class="border border-gray-50 p-6 rounded-lg shadow-sm">
         <h3 class="text-xl font-semibold text-gray-800">KASSEM HUSSEIN | <span lang="ar" >قاسم حسين </span></h3>
         <a href="https://github.com/kassem-hussein" class="block mt-4">
           <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
@@ -84,7 +84,7 @@
           </button>
         </a>
       </div> 
-      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+      <div data-aos="fade-down" class="border border-gray-50 p-6 rounded-lg shadow-sm">
         <h3 class="text-xl font-semibold text-gray-800">Moayad-AK |  <span lang="ar"> مؤيد العقاد </span> </h3>
         <a href="https://github.com/Moayad-AK" class="block mt-4">
           <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
@@ -92,7 +92,7 @@
           </button>
         </a>
       </div> 
-      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+      <div data-aos="slide-left" class="border border-gray-50 p-6 rounded-lg shadow-sm">
         <h3 class="text-xl font-semibold text-gray-800">marahabdah | <span lang="ar">  مرح العباده </span> </h3>
         <a href="https://github.com/marahabdah" class="block mt-4">
           <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
@@ -100,7 +100,7 @@
           </button>
         </a>
       </div> 
-      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+      <div data-aos="slide-right" class="border border-gray-50 p-6 rounded-lg shadow-sm">
         <h3 class="text-xl font-semibold text-gray-800">LamaHaji | <span lang="ar"> لمى الحاجي </span> </h3>
         <a href="https://github.com/LamaHaji" class="block mt-4">
           <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
@@ -108,7 +108,7 @@
           </button>
         </a>
       </div> 
-      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+      <div data-aos="fade-up" class="border border-gray-50 p-6 rounded-lg shadow-sm">
         <h3 class="text-xl font-semibold text-gray-800">hazemshartouh-cyber | <span lang="ar"> حازم شرتوح </span>  </h3>
         <a href="https://github.com/hazemshartouh-cyber" class="block mt-4">
           <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
@@ -116,7 +116,7 @@
           </button>
         </a>
       </div> 
-      <div class="border border-gray-50 p-6 rounded-lg shadow-sm">
+      <div data-aos="slide-left" class="border border-gray-50 p-6 rounded-lg shadow-sm">
         <h3 class="text-xl font-semibold text-gray-800">Eng-mohamad94 | <span lang="ar"> محمد جندية </span> </h3>
         <a href="https://github.com/Eng-mohamad94" class="block mt-4">
           <button class="bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-orange-700 hover:text-white hover:scale-105 hover:shadow-lg">
@@ -128,7 +128,7 @@
   </div>
 </section>
 
-<section id="get-started" class="bg-white py-12 mt-5">
+<section data-aos="fade-down" id="get-started" class="bg-white py-12 mt-5">
   <div class="max-w-xl mx-auto px-4">
     <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Get Started</h2>
     

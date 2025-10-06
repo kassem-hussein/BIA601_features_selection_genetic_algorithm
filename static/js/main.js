@@ -1,3 +1,7 @@
+AOS.init({
+  duration: 1000, // animation duration in ms
+  once: true,     // whether animation should happen only once
+});
 let dargzone = document.getElementById('dropzone')
 const fileInput = document.getElementById('fileInput');
 let selected_file = document.getElementById('selected-file')

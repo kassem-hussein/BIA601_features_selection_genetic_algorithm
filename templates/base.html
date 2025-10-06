@@ -7,10 +7,11 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+      <!-- AOS CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header class="sticky top-0 bg-white shadow-md">
+  <header class="sticky top-0 z-[9999] bg-white shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       
@@ -61,7 +62,7 @@
     </div>
   </div>
 </header>
-  <div>{% block content %}{% endblock %}</div>
+  <div class="overflow-hidden">{% block content %}{% endblock %}</div>
 <footer class="bg-gray-800  text-white py-10">
   <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
     
@@ -78,6 +79,8 @@
 
   </div>
 </footer>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
